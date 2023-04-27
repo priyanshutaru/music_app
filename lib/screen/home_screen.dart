@@ -113,9 +113,11 @@ class _MyHomePageState extends State<MyHomePage> {
                                 : Icon(Icons.play_arrow),
                           ),
                           onTap: () {
-                            Get.to(()=>Player());
-                            // controller.playsong(
-                            //     snapshot.data![index].uri, index);
+                            Get.to(() => Player(
+                                  data: snapshot.data![index],  
+                                ));
+                            controller.playsong(
+                                snapshot.data![index].uri, index);
                           },
                         ),
                       ),
