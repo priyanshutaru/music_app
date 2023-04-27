@@ -114,7 +114,7 @@ class _MyHomePageState extends State<MyHomePage> {
                           ),
                           onTap: () {
                             Get.to(() => Player(
-                                  data: snapshot.data![index],  
+                                  data: snapshot.data!,  
                                 ));
                             controller.playsong(
                                 snapshot.data![index].uri, index);
